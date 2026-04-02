@@ -1,221 +1,197 @@
-# 🐱 xiamo-skills
+# 馃惐 ClawCoder
 
-> 小墨的 OpenClaw 技能包 - 从 Claude Code 架构借鉴的实用技能集合
+> OpenClaw Skills Inspired by Claude Code Architecture
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: OpenClaw](https://img.shields.io/badge/Platform-OpenClaw-blue.svg)](https://github.com/openclaw/openclaw)
 
-## 📦 技能列表
+## 馃摝 鎶€鑳藉垪琛?
+鏈」鐩寘鍚?5 涓负 OpenClaw 鍔╂墜璁捐鐨勬妧鑳斤紝鐏垫劅鏉ヨ嚜 Claude Code 鐨勬灦鏋勮璁★細
 
-本项目包含 5 个为 OpenClaw 助手设计的技能，灵感来自 Claude Code 的架构设计：
-
-| 技能 | 名称 | 功能 |
+| 鎶€鑳?| 鍚嶇О | 鍔熻兘 |
 |:---:|------|------|
-| 1️⃣ | **project-indexer** | 项目结构索引与代码理解工具 |
-| 2️⃣ | **batch-coder** | 批量代码操作工具箱 |
-| 3️⃣ | **task-decomposer** | 复杂任务分解与并行调度器 |
-| 4️⃣ | **code-reviewer** | 深度代码审查工具 |
-| 5️⃣ | **exec-hook** | 执行钩子系统 |
+| 1锔忊儯 | **project-indexer** | 椤圭洰缁撴瀯绱㈠紩涓庝唬鐮佺悊瑙ｅ伐鍏?|
+| 2锔忊儯 | **batch-coder** | 鎵归噺浠ｇ爜鎿嶄綔宸ュ叿绠?|
+| 3锔忊儯 | **task-decomposer** | 澶嶆潅浠诲姟鍒嗚В涓庡苟琛岃皟搴﹀櫒 |
+| 4锔忊儯 | **code-reviewer** | 娣卞害浠ｇ爜瀹℃煡宸ュ叿 |
+| 5锔忊儯 | **exec-hook** | 鎵ц閽╁瓙绯荤粺 |
 
 ---
 
-## 🚀 快速开始
+## 馃殌 蹇€熷紑濮?
+### 瀹夎鏂瑰紡
 
-### 安装方式
-
-将技能文件夹复制到你的 OpenClaw 工作区：
+灏嗘妧鑳芥枃浠跺す澶嶅埗鍒颁綘鐨?OpenClaw 宸ヤ綔鍖猴細
 
 ```bash
-# 复制到 workspace/skills 目录
+# 澶嶅埗鍒?workspace/skills 鐩綍
 cp -r skills/* ~/.openclaw/workspace/skills/
 ```
 
-或者通过符号链接：
-
+鎴栬€呴€氳繃绗﹀彿閾炬帴锛?
 ```bash
 ln -s /path/to/xiamo-skills/skills/* ~/.openclaw/workspace/skills/
 ```
 
-### 前置要求
+### 鍓嶇疆瑕佹眰
 
-- OpenClaw 已安装并运行
-- PowerShell 5.0+（Windows）或 PowerShell Core 7+（跨平台）
+- OpenClaw 宸插畨瑁呭苟杩愯
+- PowerShell 5.0+锛圵indows锛夋垨 PowerShell Core 7+锛堣法骞冲彴锛?
+---
+
+## 馃摎 鎶€鑳借鎯?
+### 1锔忊儯 project-indexer 馃攳
+
+**椤圭洰缁撴瀯绱㈠紩涓庝唬鐮佺悊瑙ｅ伐鍏?*
+
+璁╀綘鐨?AI 鑳藉鐪熸"鐞嗚В"椤圭洰缁撴瀯锛岃€屼笉鍙槸璇诲彇鏂囦欢銆?
+**鍔熻兘锛?*
+- 閫掑綊鎵弿椤圭洰鐩綍缁撴瀯
+- 鎻愬彇鍑芥暟銆佺被銆佸彉閲忓畾涔?- 寤虹珛璋冪敤鍏崇郴绱㈠紩
+- 璇箟鎼滅储浠ｇ爜妯″紡
+- 鐢熸垚椤圭洰鏂囨。鎽樿
+
+**浣跨敤绀轰緥锛?*
+```
+鐢ㄦ埛: 绱㈠紩涓€涓嬭繖涓」鐩?灏忓ⅷ: 鎵ц project-indexer锛岃嚜鍔ㄦ壂鎻忓苟寤虹珛绱㈠紩
+```
+
+**鑴氭湰浣嶇疆锛?* `skills/project-indexer/scripts/index-project.ps1`
 
 ---
 
-## 📚 技能详情
+### 2锔忊儯 batch-coder 馃敡
 
-### 1️⃣ project-indexer 🔍
+**鎵归噺浠ｇ爜鎿嶄綔宸ュ叿绠?*
 
-**项目结构索引与代码理解工具**
-
-让你的 AI 能够真正"理解"项目结构，而不只是读取文件。
-
-**功能：**
-- 递归扫描项目目录结构
-- 提取函数、类、变量定义
-- 建立调用关系索引
-- 语义搜索代码模式
-- 生成项目文档摘要
-
-**使用示例：**
+楂樻晥澶勭悊澶ч噺鏂囦欢鐨勯噸澶嶅伐浣滐紝鐏垫劅鏉ヨ嚜 Claude Code 鐨勬壒閲忔搷浣滆兘鍔涖€?
+**鍔熻兘锛?*
+- 鎵归噺鏂囨湰鏇挎崲锛堟敮鎸佹鍒欙級
+- 鎵归噺鏂囦欢閲嶅懡鍚?- 浠庢ā鏉挎壒閲忕敓鎴愭枃浠?- 鎵归噺浠ｇ爜鎼滅储
+- 鎵归噺鎵╁睍鍚嶄慨鏀?
+**浣跨敤绀轰緥锛?*
 ```
-用户: 索引一下这个项目
-小墨: 执行 project-indexer，自动扫描并建立索引
+鐢ㄦ埛: 鎶婅繖涓枃浠跺す閲屾墍鏈塉S鏂囦欢鐨?userId 閮芥敼鎴?uid
+灏忓ⅷ: 鎵ц batch-replace.ps1 -Find 'userId' -Replace 'uid' -Pattern '*.js'
 ```
 
-**脚本位置：** `skills/project-indexer/scripts/index-project.ps1`
+**鑴氭湰浣嶇疆锛?* `skills/batch-coder/scripts/`
 
----
-
-### 2️⃣ batch-coder 🔧
-
-**批量代码操作工具箱**
-
-高效处理大量文件的重复工作，灵感来自 Claude Code 的批量操作能力。
-
-**功能：**
-- 批量文本替换（支持正则）
-- 批量文件重命名
-- 从模板批量生成文件
-- 批量代码搜索
-- 批量扩展名修改
-
-**使用示例：**
-```
-用户: 把这个文件夹里所有JS文件的 userId 都改成 uid
-小墨: 执行 batch-replace.ps1 -Find 'userId' -Replace 'uid' -Pattern '*.js'
-```
-
-**脚本位置：** `skills/batch-coder/scripts/`
-
-| 脚本 | 功能 |
+| 鑴氭湰 | 鍔熻兘 |
 |------|------|
-| `batch-replace.ps1` | 批量文本替换 |
-| `batch-grep.ps1` | 批量文件搜索 |
-| `batch-generate.ps1` | 模板批量生成 |
+| `batch-replace.ps1` | 鎵归噺鏂囨湰鏇挎崲 |
+| `batch-grep.ps1` | 鎵归噺鏂囦欢鎼滅储 |
+| `batch-generate.ps1` | 妯℃澘鎵归噺鐢熸垚 |
 
 ---
 
-### 3️⃣ task-decomposer 🎯
+### 3锔忊儯 task-decomposer 馃幆
 
-**复杂任务分解与并行调度器**
+**澶嶆潅浠诲姟鍒嗚В涓庡苟琛岃皟搴﹀櫒**
 
-将复杂任务拆解为可管理的子任务，并行执行提高效率。
+灏嗗鏉備换鍔℃媶瑙ｄ负鍙鐞嗙殑瀛愪换鍔★紝骞惰鎵ц鎻愰珮鏁堢巼銆?
+**鍔熻兘锛?*
+- 鏅鸿兘鍒嗚В澶嶆潅浠诲姟
+- 璇嗗埆浠诲姟渚濊禆鍏崇郴
+- 璋冨害澶氫釜瀛愪换鍔″苟琛屾墽琛?- 姹囨€诲悇瀛愪换鍔＄粨鏋?- 鐢熸垚鎵ц鎶ュ憡
 
-**功能：**
-- 智能分解复杂任务
-- 识别任务依赖关系
-- 调度多个子任务并行执行
-- 汇总各子任务结果
-- 生成执行报告
-
-**使用示例：**
+**浣跨敤绀轰緥锛?*
 ```
-用户: 帮我全面审查这个项目
-小墨: 
-  1. [并行] 代码规范检查
-  2. [并行] 安全漏洞扫描
-  3. [并行] 性能问题分析
-  4. [顺序] 生成审查报告
+鐢ㄦ埛: 甯垜鍏ㄩ潰瀹℃煡杩欎釜椤圭洰
+灏忓ⅷ: 
+  1. [骞惰] 浠ｇ爜瑙勮寖妫€鏌?  2. [骞惰] 瀹夊叏婕忔礊鎵弿
+  3. [骞惰] 鎬ц兘闂鍒嗘瀽
+  4. [椤哄簭] 鐢熸垚瀹℃煡鎶ュ憡
 ```
 
-**脚本位置：** `skills/task-decomposer/scripts/task-decompose.ps1`
+**鑴氭湰浣嶇疆锛?* `skills/task-decomposer/scripts/task-decompose.ps1`
 
 ---
 
-### 4️⃣ code-reviewer 🔒
+### 4锔忊儯 code-reviewer 馃敀
 
-**深度代码审查工具**
+**娣卞害浠ｇ爜瀹℃煡宸ュ叿**
 
-自动检测常见代码问题，灵感来自 Claude Code 的深度代码理解。
-
-**审查维度：**
-- 🔴 **安全漏洞**：SQL注入、XSS、命令注入、硬编码密码
-- ⚡ **性能问题**：N+1查询、内存泄漏、同步阻塞
-- 📝 **代码规范**：命名规范、魔法数字、过深嵌套
-- 🐛 **逻辑错误**：空指针、边界条件、并发问题
-
-**使用示例：**
+鑷姩妫€娴嬪父瑙佷唬鐮侀棶棰橈紝鐏垫劅鏉ヨ嚜 Claude Code 鐨勬繁搴︿唬鐮佺悊瑙ｃ€?
+**瀹℃煡缁村害锛?*
+- 馃敶 **瀹夊叏婕忔礊**锛歋QL娉ㄥ叆銆乆SS銆佸懡浠ゆ敞鍏ャ€佺‖缂栫爜瀵嗙爜
+- 鈿?**鎬ц兘闂**锛歂+1鏌ヨ銆佸唴瀛樻硠婕忋€佸悓姝ラ樆濉?- 馃摑 **浠ｇ爜瑙勮寖**锛氬懡鍚嶈鑼冦€侀瓟娉曟暟瀛椼€佽繃娣卞祵濂?- 馃悰 **閫昏緫閿欒**锛氱┖鎸囬拡銆佽竟鐣屾潯浠躲€佸苟鍙戦棶棰?
+**浣跨敤绀轰緥锛?*
 ```
-用户: 帮我审查这段代码
-小墨: 执行 code-review.ps1 -Content "..." -Level full
+鐢ㄦ埛: 甯垜瀹℃煡杩欐浠ｇ爜
+灏忓ⅷ: 鎵ц code-review.ps1 -Content "..." -Level full
 ```
 
-**脚本位置：** `skills/code-reviewer/scripts/code-review.ps1`
+**鑴氭湰浣嶇疆锛?* `skills/code-reviewer/scripts/code-review.ps1`
 
 ---
 
-### 5️⃣ exec-hook 🪝
+### 5锔忊儯 exec-hook 馃獫
 
-**执行钩子系统**
+**鎵ц閽╁瓙绯荤粺**
 
-在操作执行前后注入自定义逻辑，让每次重要操作都可追踪、可审计、可回滚。
-
-**功能：**
-- 操作前后自动记录日志
-- 文件修改前自动备份
-- 危险操作拦截确认
-- 执行结果摘要生成
-- 一键回滚能力
-
-**内置钩子：**
-| 钩子 | 触发时机 | 功能 |
+鍦ㄦ搷浣滄墽琛屽墠鍚庢敞鍏ヨ嚜瀹氫箟閫昏緫锛岃姣忔閲嶈鎿嶄綔閮藉彲杩借釜銆佸彲瀹¤銆佸彲鍥炴粴銆?
+**鍔熻兘锛?*
+- 鎿嶄綔鍓嶅悗鑷姩璁板綍鏃ュ織
+- 鏂囦欢淇敼鍓嶈嚜鍔ㄥ浠?- 鍗遍櫓鎿嶄綔鎷︽埅纭
+- 鎵ц缁撴灉鎽樿鐢熸垚
+- 涓€閿洖婊氳兘鍔?
+**鍐呯疆閽╁瓙锛?*
+| 閽╁瓙 | 瑙﹀彂鏃舵満 | 鍔熻兘 |
 |------|---------|------|
-| `before_exec` | 命令执行前 | 检查危险命令 |
-| `before_write` | 文件写入前 | 自动备份 |
-| `before_delete` | 文件删除前 | 确认+回收站 |
-| `after_exec` | 命令执行后 | 记录输出摘要 |
+| `before_exec` | 鍛戒护鎵ц鍓?| 妫€鏌ュ嵄闄╁懡浠?|
+| `before_write` | 鏂囦欢鍐欏叆鍓?| 鑷姩澶囦唤 |
+| `before_delete` | 鏂囦欢鍒犻櫎鍓?| 纭+鍥炴敹绔?|
+| `after_exec` | 鍛戒护鎵ц鍚?| 璁板綍杈撳嚭鎽樿 |
 
-**脚本位置：** `skills/exec-hook/scripts/`
+**鑴氭湰浣嶇疆锛?* `skills/exec-hook/scripts/`
 
-| 脚本 | 功能 |
+| 鑴氭湰 | 鍔熻兘 |
 |------|------|
-| `exec-hook.ps1` | 核心钩子逻辑 |
-| `rollback.ps1` | 一键回滚工具 |
+| `exec-hook.ps1` | 鏍稿績閽╁瓙閫昏緫 |
+| `rollback.ps1` | 涓€閿洖婊氬伐鍏?|
 
 ---
 
-## 📂 目录结构
+## 馃搨 鐩綍缁撴瀯
 
 ```
 xiamo-skills/
-├── README.md
-├── LICENSE
-└── skills/
-    ├── project-indexer/
-    │   ├── SKILL.md
-    │   └── scripts/
-    │       └── index-project.ps1
-    ├── batch-coder/
-    │   ├── SKILL.md
-    │   └── scripts/
-    │       ├── batch-replace.ps1
-    │       ├── batch-grep.ps1
-    │       └── batch-generate.ps1
-    ├── task-decomposer/
-    │   ├── SKILL.md
-    │   └── scripts/
-    │       └── task-decompose.ps1
-    ├── code-reviewer/
-    │   ├── SKILL.md
-    │   └── scripts/
-    │       └── code-review.ps1
-    └── exec-hook/
-        ├── SKILL.md
-        └── scripts/
-            ├── exec-hook.ps1
-            └── rollback.ps1
+鈹溾攢鈹€ README.md
+鈹溾攢鈹€ LICENSE
+鈹斺攢鈹€ skills/
+    鈹溾攢鈹€ project-indexer/
+    鈹?  鈹溾攢鈹€ SKILL.md
+    鈹?  鈹斺攢鈹€ scripts/
+    鈹?      鈹斺攢鈹€ index-project.ps1
+    鈹溾攢鈹€ batch-coder/
+    鈹?  鈹溾攢鈹€ SKILL.md
+    鈹?  鈹斺攢鈹€ scripts/
+    鈹?      鈹溾攢鈹€ batch-replace.ps1
+    鈹?      鈹溾攢鈹€ batch-grep.ps1
+    鈹?      鈹斺攢鈹€ batch-generate.ps1
+    鈹溾攢鈹€ task-decomposer/
+    鈹?  鈹溾攢鈹€ SKILL.md
+    鈹?  鈹斺攢鈹€ scripts/
+    鈹?      鈹斺攢鈹€ task-decompose.ps1
+    鈹溾攢鈹€ code-reviewer/
+    鈹?  鈹溾攢鈹€ SKILL.md
+    鈹?  鈹斺攢鈹€ scripts/
+    鈹?      鈹斺攢鈹€ code-review.ps1
+    鈹斺攢鈹€ exec-hook/
+        鈹溾攢鈹€ SKILL.md
+        鈹斺攢鈹€ scripts/
+            鈹溾攢鈹€ exec-hook.ps1
+            鈹斺攢鈹€ rollback.ps1
 ```
 
 ---
 
-## 🛠️ 使用前提
+## 馃洜锔?浣跨敤鍓嶆彁
 
-### OpenClaw 配置
+### OpenClaw 閰嶇疆
 
-确保你的 `openclaw.json` 已正确配置 skills 路径：
-
+纭繚浣犵殑 `openclaw.json` 宸叉纭厤缃?skills 璺緞锛?
 ```json
 {
   "skills": {
@@ -228,61 +204,50 @@ xiamo-skills/
 }
 ```
 
-### 权限要求
+### 鏉冮檺瑕佹眰
 
-- 读取项目文件的权限
-- 写入 `memory/` 目录的权限（用于存储索引和日志）
-- 执行 PowerShell 脚本的权限
+- 璇诲彇椤圭洰鏂囦欢鐨勬潈闄?- 鍐欏叆 `memory/` 鐩綍鐨勬潈闄愶紙鐢ㄤ簬瀛樺偍绱㈠紩鍜屾棩蹇楋級
+- 鎵ц PowerShell 鑴氭湰鐨勬潈闄?
+---
+
+## 馃摉 鏂囨。
+
+姣忎釜鎶€鑳介兘鏈夌嫭绔嬬殑 `SKILL.md` 鏂囦欢锛屽寘鍚細
+- 鎶€鑳芥弿杩板拰瑙﹀彂鏉′欢
+- 璇︾粏浣跨敤璇存槑
+- 绀轰緥鍜屾渶浣冲疄璺?- 鍙傛暟璇存槑
 
 ---
 
-## 📖 文档
+## 馃 璐＄尞
 
-每个技能都有独立的 `SKILL.md` 文件，包含：
-- 技能描述和触发条件
-- 详细使用说明
-- 示例和最佳实践
-- 参数说明
+娆㈣繋鎻愪氦 Issue 鍜?Pull Request锛?
+濡傛灉浣犳湁鏂扮殑鎶€鑳芥兂娉曟垨鏀硅繘寤鸿锛?1. Fork 鏈粨搴?2. 鍒涘缓鏂版妧鑳藉垎鏀?3. 鎻愪氦鏇存敼
+4. 鍙戣捣 Pull Request
 
 ---
 
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-如果你有新的技能想法或改进建议：
-1. Fork 本仓库
-2. 创建新技能分支
-3. 提交更改
-4. 发起 Pull Request
-
----
-
-## 📝 更新日志
+## 馃摑 鏇存柊鏃ュ織
 
 ### v1.0.0 (2026-04-02)
-- ✨ 初始版本发布
-- 添加 5 个核心技能
-- 包含完整的 SKILL.md 文档
-- 提供可执行的 PowerShell 脚本
+- 鉁?鍒濆鐗堟湰鍙戝竷
+- 娣诲姞 5 涓牳蹇冩妧鑳?- 鍖呭惈瀹屾暣鐨?SKILL.md 鏂囨。
+- 鎻愪緵鍙墽琛岀殑 PowerShell 鑴氭湰
 
 ---
 
-## ⚠️ 免责声明
+## 鈿狅笍 鍏嶈矗澹版槑
 
-这些技能由小墨（一个 AI 助手）开发并自用，代码仅供参考和学习。使用前请：
-1. 理解每个脚本的功能
-2. 在测试环境先验证
-3. 重要操作前做好备份
+杩欎簺鎶€鑳界敱灏忓ⅷ锛堜竴涓?AI 鍔╂墜锛夊紑鍙戝苟鑷敤锛屼唬鐮佷粎渚涘弬鑰冨拰瀛︿範銆備娇鐢ㄥ墠璇凤細
+1. 鐞嗚В姣忎釜鑴氭湰鐨勫姛鑳?2. 鍦ㄦ祴璇曠幆澧冨厛楠岃瘉
+3. 閲嶈鎿嶄綔鍓嶅仛濂藉浠?
+---
+
+## 馃摟 鑱旂郴
+
+- **浣滆€?*锛氬皬澧?馃惐
+- **GitHub**锛歔@Chan-0901](https://github.com/Chan-0901)
 
 ---
 
-## 📧 联系
-
-- **开发者**：小墨 🐱
-- **平台**：OpenClaw
-- **GitHub**：[@Chan-0901](https://github.com/Chan-0901)
-
----
-
-> *"让 AI 助手不只是工具，而是真正的伙伴"* 🐱✨
+> *"璁?AI 鍔╂墜涓嶅彧鏄伐鍏凤紝鑰屾槸鐪熸鐨勪紮浼?* 馃惐鉁?

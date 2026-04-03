@@ -1,21 +1,21 @@
-# 馃惐 ClawCoder
+# 馃幆 ClawCoder
 
 > OpenClaw Skills Inspired by Claude Code Architecture
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: OpenClaw](https://img.shields.io/badge/Platform-OpenClaw-blue.svg)](https://github.com/openclaw/openclaw)
 
-## 馃摝 Skill List
+## 馃幆 Skill List
 
 This project contains 5 skills designed for OpenClaw, inspired by Claude Code's architecture:
 
 | # | Name | Description |
-|:---:|------|------|
-| 1锔忊儯 | **project-indexer** | Project structure indexing and code comprehension |
-| 2锔忊儯 | **batch-coder** | Batch code operations toolkit |
-| 3锔忊儯 | **task-decomposer** | Complex task decomposition and parallel scheduler |
-| 4锔忊儯 | **code-reviewer** | Deep code review tool |
-| 5锔忊儯 | **exec-hook** | Execution hook system |
+|---|------|-------------|
+| 1 | project-indexer | **椤圭洰缁撴瀯绱㈠紩鍣?* - Project structure indexing and code comprehension |
+| 2 | batch-coder | **鎵归噺浠ｇ爜鎿嶄綔宸ュ叿绠?* - Batch code operations toolkit |
+| 3 | task-decomposer | **浠诲姟鍒嗚В璋冨害鍣?* - Complex task decomposition and parallel scheduler |
+| 4 | code-reviewer | **浠ｇ爜瀹℃煡鍣?* - Deep code review tool |
+| 5 | exec-hook | **鎵ц閽╁瓙绯荤粺** - Execution hook system |
 
 ---
 
@@ -47,7 +47,7 @@ ln -s /path/to/clawcoder/skills/* ~/.openclaw/workspace/skills/
 
 ### 1锔忊儯 project-indexer 馃攳
 
-**Project Structure Indexing and Code Comprehension**
+**(Project Structure Indexing and Code Comprehension)**
 
 Enables your AI to truly "understand" project structure, not just read files.
 
@@ -70,7 +70,7 @@ Bot: Executes project-indexer, automatically scans and builds index
 
 ### 2锔忊儯 batch-coder 馃敡
 
-**Batch Code Operations Toolkit**
+**(Batch Code Operations Toolkit)**
 
 Efficiently handle repetitive work on large numbers of files, inspired by Claude Code's batch operations.
 
@@ -87,7 +87,7 @@ User: Change all userId to uid in JS files in this folder
 Bot: Executes batch-replace.ps1 -Find 'userId' -Replace 'uid' -Pattern '*.js'
 ```
 
-**Scripts:** `skills/batch-coder/scripts/`
+**Scripts:**
 
 | Script | Description |
 |--------|-------------|
@@ -97,9 +97,9 @@ Bot: Executes batch-replace.ps1 -Find 'userId' -Replace 'uid' -Pattern '*.js'
 
 ---
 
-### 3锔忊儯 task-decomposer 馃幆
+### 3锔忊儯 task-decomposer 馃З
 
-**Complex Task Decomposition and Parallel Scheduler**
+**(Complex Task Decomposition and Parallel Scheduler)**
 
 Decompose complex tasks into manageable subtasks and execute in parallel for higher efficiency.
 
@@ -126,15 +126,18 @@ Bot:
 
 ### 4锔忊儯 code-reviewer 馃敀
 
-**Deep Code Review Tool**
+**(Deep Code Review Tool)**
 
 Automatically detect common code issues, inspired by Claude Code's deep code understanding.
 
 **Review Dimensions:**
-- 馃敶 **Security**: SQL injection, XSS, command injection, hardcoded passwords
-- 鈿?**Performance**: N+1 queries, memory leaks, synchronous blocking
-- 馃摑 **Code Style**: Naming conventions, magic numbers, deep nesting
-- 馃悰 **Logic Errors**: Null pointers, boundary conditions, concurrency issues
+
+| Dimension | Items |
+|-----------|-------|
+| 馃敀 Security | SQL injection, XSS, command injection, hardcoded passwords |
+| 鈿?Performance | N+1 queries, memory leaks, synchronous blocking |
+| 馃摑 Code Style | Naming conventions, magic numbers, deep nesting |
+| 馃悰 Logic Errors | Null pointers, boundary conditions, concurrency issues |
 
 **Usage:**
 ```
@@ -146,9 +149,8 @@ Bot: Executes code-review.ps1 -Content "..." -Level full
 
 ---
 
-### 5锔忊儯 exec-hook 馃獫
-
-**Execution Hook System**
+### 5锔忊儯 exec-hook 鈿?
+**(Execution Hook System)**
 
 Inject custom logic before/after operation execution, making every important operation trackable, auditable, and rollbackable.
 
@@ -160,6 +162,7 @@ Inject custom logic before/after operation execution, making every important ope
 - One-click rollback
 
 **Built-in Hooks:**
+
 | Hook | Trigger | Description |
 |------|---------|-------------|
 | `before_exec` | Before command execution | Check dangerous commands |
@@ -167,7 +170,7 @@ Inject custom logic before/after operation execution, making every important ope
 | `before_delete` | Before file delete | Confirm + recycle bin |
 | `after_exec` | After command execution | Log output summary |
 
-**Scripts:** `skills/exec-hook/scripts/`
+**Scripts:**
 
 | Script | Description |
 |--------|-------------|
@@ -176,7 +179,7 @@ Inject custom logic before/after operation execution, making every important ope
 
 ---
 
-## 馃搨 Directory Structure
+## 馃搧 Directory Structure
 
 ```
 clawcoder/
@@ -202,7 +205,7 @@ clawcoder/
     鈹?  鈹斺攢鈹€ scripts/
     鈹?      鈹斺攢鈹€ code-review.ps1
     鈹斺攢鈹€ exec-hook/
-        鈹溾攢鈹€ SKILL.md
+        鈹?  鈹溾攢鈹€ SKILL.md
         鈹斺攢鈹€ scripts/
             鈹溾攢鈹€ exec-hook.ps1
             鈹斺攢鈹€ rollback.ps1
@@ -210,7 +213,7 @@ clawcoder/
 
 ---
 
-## 馃洜锔?Prerequisites
+## 鈿狅笍 Prerequisites
 
 ### OpenClaw Configuration
 
@@ -240,15 +243,15 @@ Ensure your `openclaw.json` has the skills path configured:
 
 ### v1.0.0 (2026-04-02)
 - 鉁?Initial release
-- Added 5 core skills
-- Included complete SKILL.md documentation
-- Provided executable PowerShell scripts
+- 鉃?Added 5 core skills
+- 馃摎 Included complete SKILL.md documentation
+- 馃敡 Provided executable PowerShell scripts
 
 ---
 
-## 鈿狅笍 Disclaimer
+## 鈿栵笍 Disclaimer
 
-These skills are developed and used by 灏忓ⅷ (an AI assistant). Code is for reference and learning only. Before using:
+These skills are developed and used by **姹熷崡** (an AI assistant). Code is for reference and learning only. Before using:
 
 1. Understand each script's functionality
 2. Test in a safe environment first
@@ -256,11 +259,11 @@ These skills are developed and used by 灏忓ⅷ (an AI assistant). Code is for 
 
 ---
 
-## 馃摟 Contact
+## 馃摓 Contact
 
-- **Author**: 灏忓ⅷ 馃惐
-- **GitHub**: [@Chan-0901](https://github.com/Chan-0901)
+- **Author:** 姹熷崡
+- **GitHub:** [@Chan-0901](https://github.com/Chan-0901)
 
 ---
 
-> *"Making AI assistants not just tools, but true partners"* 馃惐鉁?
+> *"Making AI assistants not just tools, but true partners"* 馃幆

@@ -1,25 +1,25 @@
-# 馃幆 ClawCoder
+# 🎯 ClawCoder
 
 > OpenClaw Skills Inspired by Claude Code Architecture
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: OpenClaw](https://img.shields.io/badge/Platform-OpenClaw-blue.svg)](https://github.com/openclaw/openclaw)
 
-## 馃幆 Skill List
+## 🎯 Skill List
 
 This project contains 5 skills designed for OpenClaw, inspired by Claude Code's architecture:
 
 | # | Name | Description |
 |---|------|-------------|
-| 1 | project-indexer | **椤圭洰缁撴瀯绱㈠紩鍣?* - Project structure indexing and code comprehension |
-| 2 | batch-coder | **鎵归噺浠ｇ爜鎿嶄綔宸ュ叿绠?* - Batch code operations toolkit |
-| 3 | task-decomposer | **浠诲姟鍒嗚В璋冨害鍣?* - Complex task decomposition and parallel scheduler |
-| 4 | code-reviewer | **浠ｇ爜瀹℃煡鍣?* - Deep code review tool |
-| 5 | exec-hook | **鎵ц閽╁瓙绯荤粺** - Execution hook system |
+| 1 | project-indexer | **Project Structure Indexer** - Project structure indexing and code comprehension |
+| 2 | batch-coder | **Batch Code Operations Toolkit** - Batch code operations toolkit |
+| 3 | task-decomposer | **Task Decomposition Scheduler** - Complex task decomposition and parallel scheduler |
+| 4 | code-reviewer | **Code Reviewer** - Deep code review tool |
+| 5 | exec-hook | **Execution Hook System** - Execution hook system |
 
 ---
 
-## 馃殌 Quick Start
+## 🚀 Quick Start
 
 ### Installation
 
@@ -43,9 +43,9 @@ ln -s /path/to/clawcoder/skills/* ~/.openclaw/workspace/skills/
 
 ---
 
-## 馃摎 Skill Details
+## 📚 Skill Details
 
-### 1锔忊儯 project-indexer 馃攳
+### 1️⃣ project-indexer 🔍
 
 **(Project Structure Indexing and Code Comprehension)**
 
@@ -68,7 +68,7 @@ Bot: Executes project-indexer, automatically scans and builds index
 
 ---
 
-### 2锔忊儯 batch-coder 馃敡
+### 2️⃣ batch-coder 🔧
 
 **(Batch Code Operations Toolkit)**
 
@@ -97,7 +97,7 @@ Bot: Executes batch-replace.ps1 -Find 'userId' -Replace 'uid' -Pattern '*.js'
 
 ---
 
-### 3锔忊儯 task-decomposer 馃З
+### 3️⃣ task-decomposer 🧩
 
 **(Complex Task Decomposition and Parallel Scheduler)**
 
@@ -124,7 +124,7 @@ Bot:
 
 ---
 
-### 4锔忊儯 code-reviewer 馃敀
+### 4️⃣ code-reviewer 🔒
 
 **(Deep Code Review Tool)**
 
@@ -134,10 +134,10 @@ Automatically detect common code issues, inspired by Claude Code's deep code und
 
 | Dimension | Items |
 |-----------|-------|
-| 馃敀 Security | SQL injection, XSS, command injection, hardcoded passwords |
-| 鈿?Performance | N+1 queries, memory leaks, synchronous blocking |
-| 馃摑 Code Style | Naming conventions, magic numbers, deep nesting |
-| 馃悰 Logic Errors | Null pointers, boundary conditions, concurrency issues |
+| 🔒 Security | SQL injection, XSS, command injection, hardcoded passwords |
+| ⚡ Performance | N+1 queries, memory leaks, synchronous blocking |
+| 📝 Code Style | Naming conventions, magic numbers, deep nesting |
+| 🐛 Logic Errors | Null pointers, boundary conditions, concurrency issues |
 
 **Usage:**
 ```
@@ -149,7 +149,8 @@ Bot: Executes code-review.ps1 -Content "..." -Level full
 
 ---
 
-### 5锔忊儯 exec-hook 鈿?
+### 5️⃣ exec-hook ⚓
+
 **(Execution Hook System)**
 
 Inject custom logic before/after operation execution, making every important operation trackable, auditable, and rollbackable.
@@ -179,41 +180,41 @@ Inject custom logic before/after operation execution, making every important ope
 
 ---
 
-## 馃搧 Directory Structure
+## 📁 Directory Structure
 
 ```
 clawcoder/
-鈹溾攢鈹€ README.md
-鈹溾攢鈹€ LICENSE
-鈹斺攢鈹€ skills/
-    鈹溾攢鈹€ project-indexer/
-    鈹?  鈹溾攢鈹€ SKILL.md
-    鈹?  鈹斺攢鈹€ scripts/
-    鈹?      鈹斺攢鈹€ index-project.ps1
-    鈹溾攢鈹€ batch-coder/
-    鈹?  鈹溾攢鈹€ SKILL.md
-    鈹?  鈹斺攢鈹€ scripts/
-    鈹?      鈹溾攢鈹€ batch-replace.ps1
-    鈹?      鈹溾攢鈹€ batch-grep.ps1
-    鈹?      鈹斺攢鈹€ batch-generate.ps1
-    鈹溾攢鈹€ task-decomposer/
-    鈹?  鈹溾攢鈹€ SKILL.md
-    鈹?  鈹斺攢鈹€ scripts/
-    鈹?      鈹斺攢鈹€ task-decompose.ps1
-    鈹溾攢鈹€ code-reviewer/
-    鈹?  鈹溾攢鈹€ SKILL.md
-    鈹?  鈹斺攢鈹€ scripts/
-    鈹?      鈹斺攢鈹€ code-review.ps1
-    鈹斺攢鈹€ exec-hook/
-        鈹?  鈹溾攢鈹€ SKILL.md
-        鈹斺攢鈹€ scripts/
-            鈹溾攢鈹€ exec-hook.ps1
-            鈹斺攢鈹€ rollback.ps1
+├── README.md
+├── LICENSE
+└── skills/
+    ├── project-indexer/
+    │   ├── SKILL.md
+    │   └── scripts/
+    │       └── index-project.ps1
+    ├── batch-coder/
+    │   ├── SKILL.md
+    │   └── scripts/
+    │       ├── batch-replace.ps1
+    │       ├── batch-grep.ps1
+    │       └── batch-generate.ps1
+    ├── task-decomposer/
+    │   ├── SKILL.md
+    │   └── scripts/
+    │       └── task-decompose.ps1
+    ├── code-reviewer/
+    │   ├── SKILL.md
+    │   └── scripts/
+    │       └── code-review.ps1
+    └── exec-hook/
+        │   ├── SKILL.md
+        └── scripts/
+            ├── exec-hook.ps1
+            └── rollback.ps1
 ```
 
 ---
 
-## 鈿狅笍 Prerequisites
+## ⚠️ Prerequisites
 
 ### OpenClaw Configuration
 
@@ -239,19 +240,19 @@ Ensure your `openclaw.json` has the skills path configured:
 
 ---
 
-## 馃摑 Updates
+## 📝 Updates
 
 ### v1.0.0 (2026-04-02)
-- 鉁?Initial release
-- 鉃?Added 5 core skills
-- 馃摎 Included complete SKILL.md documentation
-- 馃敡 Provided executable PowerShell scripts
+- ✨ Initial release
+- ➕ Added 5 core skills
+- 📚 Included complete SKILL.md documentation
+- 🔧 Provided executable PowerShell scripts
 
 ---
 
-## 鈿栵笍 Disclaimer
+## ⚖️ Disclaimer
 
-These skills are developed and used by **姹熷崡** (an AI assistant). Code is for reference and learning only. Before using:
+These skills are developed and used by **江南** (an AI assistant). Code is for reference and learning only. Before using:
 
 1. Understand each script's functionality
 2. Test in a safe environment first
@@ -259,11 +260,11 @@ These skills are developed and used by **姹熷崡** (an AI assistant). Code is 
 
 ---
 
-## 馃摓 Contact
+## 📞 Contact
 
-- **Author:** 姹熷崡
+- **Author:** 江南
 - **GitHub:** [@Chan-0901](https://github.com/Chan-0901)
 
 ---
 
-> *"Making AI assistants not just tools, but true partners"* 馃幆
+> *"Making AI assistants not just tools, but true partners"* 🎯
